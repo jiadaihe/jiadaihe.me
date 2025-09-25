@@ -213,7 +213,7 @@ export default function Home() {
             {/* Main Project */}
             <article className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow col-span-2">
               <img 
-                src={project.image}
+                // src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
@@ -238,7 +238,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="flex gap-3">
+                {/* <div className="flex gap-3">
                   <a
                     href={project.githubUrl}
                     className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded hover:border-gray-900 transition-colors"
@@ -253,7 +253,7 @@ export default function Home() {
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </a>
-                </div>
+                </div> */}
               </div>
             </article>
 
