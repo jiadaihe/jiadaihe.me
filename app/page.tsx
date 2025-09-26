@@ -127,13 +127,24 @@ export default function Home() {
 
           {/* QR Code */}
           <div className="text-center mb-6">
+            <video 
+              className="w-24 h-24 mx-auto border border-gray-400 object-cover rounded"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/videos/me.mp4" type="video/mp4" />
+            </video>
+          </div>
+          {/* <div className="text-center mb-6">
             <div className="w-24 h-24 mx-auto bg-black border border-gray-400" 
                  style={{ 
                    imageRendering: 'pixelated',
                    backgroundImage: 'repeating-conic-gradient(#000 0% 25%, #fff 0% 50%) 50% / 4px 4px'
                  }}>
             </div>
-          </div>
+          </div> */}
 
           {/* Receipt Footer */}
           <div className="border-t border-dashed border-gray-400 pt-4">
