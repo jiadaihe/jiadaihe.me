@@ -46,13 +46,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white flex">
       {/* Draggable Profile Image */}
-      <img 
-        src="/me.jpeg"
-        alt="Profile"
-        className="fixed top-5 right-10 w-20 h-20 rounded-lg cursor-grab active:cursor-grabbing z-50 shadow-lg"
-        draggable
-        style={{ imageRendering: 'pixelated' }}
-      />
 
       {/* Watermark */}
       <div className="fixed bottom-2 left-2 text-gray-400 text-sm pointer-events-none z-40 font-mono">
@@ -137,14 +130,6 @@ export default function Home() {
               <source src="/videos/me.mp4" type="video/mp4" />
             </video>
           </div>
-          {/* <div className="text-center mb-6">
-            <div className="w-24 h-24 mx-auto bg-black border border-gray-400" 
-                 style={{ 
-                   imageRendering: 'pixelated',
-                   backgroundImage: 'repeating-conic-gradient(#000 0% 25%, #fff 0% 50%) 50% / 4px 4px'
-                 }}>
-            </div>
-          </div> */}
 
           {/* Receipt Footer */}
           <div className="border-t border-dashed border-gray-400 pt-4">
