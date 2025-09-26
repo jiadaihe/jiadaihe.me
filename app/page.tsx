@@ -37,7 +37,6 @@ export default function Home() {
   const socialLinks = [
     { name: 'Instagram', url: 'https://instagram.com/jiadaiho' },
     { name: 'Twitter', url: 'https://twitter.com/jiadaiho' },
-    // { name: 'Email', url: 'jiadaihe@gmail.com' },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/jiadaihe' },
     { name: 'GitHub', url: 'https://github.com/jiadaihe' },
     { name: 'Blog', url: 'https://jiadaihe.substack.com/' }
