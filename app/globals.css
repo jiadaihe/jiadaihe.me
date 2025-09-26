@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+* {
+  cursor: url('/cursors/c_939.png'), auto;
+}
+
+a, button {
+  cursor: url('/cursors/c_939.png'), pointer;
+}

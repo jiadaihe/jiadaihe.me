@@ -4,10 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { Github, ExternalLink, Mail, Linkedin, Twitter, Calendar, MapPin } from 'lucide-react';
 
 export default function Home() {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);  // initialize to null on server side
   const [transferredData, setTransferredData] = useState('0 B');
 
   useEffect(() => {
+    // set current time on client side
+    setCurrentTime(new Date());
+
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
@@ -138,11 +141,11 @@ export default function Home() {
               <tbody>
                 <tr>
                   <td className="text-left">DATE:</td>
-                  <td className="text-right">{currentTime.toLocaleDateString()}</td>
+                  <td className="text-right">{currentTime?.toLocaleDateString()}</td>
                 </tr>
                 <tr>
                   <td className="text-left">TIME:</td>
-                  <td className="text-right">{currentTime.toLocaleTimeString()}</td>
+                  <td className="text-right">{currentTime?.toLocaleTimeString()}</td>
                 </tr>
                 <tr>
                   <td className="text-left">TRANSFERRED:</td>
@@ -257,12 +260,12 @@ export default function Home() {
               </div>
             </article>
 
-            {/* Weather Widget (like Maxwell's) */}
+            {/* Weather Widget */}
             <article className="bg-blue-50 p-6 rounded-lg">
               <h3 className="font-bold mb-4">Current Status</h3>
               <p className="mb-2">I am currently living in New York City, USA.</p>
               <p className="mb-2">It is:</p>
-              <p className="text-2xl font-bold">{currentTime.toLocaleTimeString()}</p>
+              <p className="text-2xl font-bold">{currentTime?.toLocaleTimeString()}</p>
               <p className="text-gray-600">🌤 Partly cloudy</p>
               <p className="text-lg">72°F</p>
             </article>
